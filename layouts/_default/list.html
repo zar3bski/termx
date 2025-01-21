@@ -1,16 +1,19 @@
 {{ define "main" }}
-    <h1 id="{{ .Title | urlize }}">{{ .Title | markdownify }}</h1>
 
-    {{ .Content }}
+<header class="content__header">
+    <div class="section-path">/{{.Title}}</div>
+</header><br>
 
-    <ul>
+{{ .Content }}
+
+<ul>
     {{ range .Pages }}
-        {{ .Render "li" }}
+    {{ .Render "li" }}
     {{ end }}
-    </ul>
+</ul>
 
 {{ end }}
 
 {{define "aside" }}
-    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+{{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
 {{ end }}

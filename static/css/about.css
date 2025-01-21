@@ -12,6 +12,10 @@
     content: none;
 }
 
+.about__title::after {
+    content: none;
+}
+
 /* Social media links */
 .aside__social-links {
     padding: 0;

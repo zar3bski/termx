@@ -9,6 +9,10 @@
     content: none;
 }
 
+.page__logo:after {
+    content: none;
+}
+
 .page__logo-inner {
     display: block;
     background: var(--logo);
@@ -16,7 +20,8 @@
     padding: 0.25rem;
 }
 
-a.page__logo-inner:link, a.page__logo-inner:visited {
+a.page__logo-inner:link,
+a.page__logo-inner:visited {
     color: inherit;
     text-decoration: inherit;
 }

@@ -1,1 +1,4 @@
-<li><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></li>
+<li>
+    {{ if (.Params.series) }}<div class="series-path">{{.Params.series}}</div>{{end}}<a href="{{ .Permalink }}">{{
+        .Title | markdownify }}</a>
+</li>

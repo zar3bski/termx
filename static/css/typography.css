@@ -10,11 +10,11 @@ body {
 }
 
 /* Headings */
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
     font-size: 1rem;
     margin: 1.5rem 0 0 0;
@@ -39,20 +39,76 @@ h5+h6 {
     margin: 0;
 }
 
-h1:before { content: "# "; }
-h2:before { content: "## "; }
-h3:before { content: "### "; }
-h4:before { content: "#### "; }
-h5:before { content: "##### "; }
-h6:before { content: "###### "; }
+h1:before {
+    content: "[";
+}
 
-h1:before, 
-h2:before, 
-h3:before, 
-h4:before, 
-h5:before, 
+h2:before {
+    content: "[[";
+}
+
+h3:before {
+    content: "[[[";
+}
+
+h4:before {
+    content: "{";
+}
+
+h5:before {
+    content: "{{";
+}
+
 h6:before {
-    color: var(--muted);
+    content: "{{{";
+}
+
+h1:after {
+    content: "]";
+}
+
+h2:after {
+    content: "]]";
+}
+
+h3:after {
+    content: "]]]";
+}
+
+h4:after {
+    content: "}";
+}
+
+h5:after {
+    content: "}}";
+}
+
+h6:after {
+    content: "}}}";
+}
+
+h1:before,
+h2:before,
+h3:before {
+    color: var(--base08);
+}
+
+h4:before,
+h5:before,
+h6:before {
+    color: var(--base09);
+}
+
+h1:after,
+h2:after,
+h3:after {
+    color: var(--base08);
+}
+
+h4:after,
+h5:after,
+h6:after {
+    color: var(--base09);
 }
 
 h1:first-child {
@@ -66,11 +122,14 @@ p {
 
 /* Links */
 
-a:link, a:visited {
+a:link,
+a:visited {
     color: var(--link);
 }
 
-a:hover, a:active, a.active {
+a:hover,
+a:active,
+a.active {
     color: var(--hover);
 }
 
@@ -106,21 +165,21 @@ li.nomarker {
 }
 
 dt {
-  margin: 0;
-  font-weight: bold;
+    margin: 0;
+    font-weight: bold;
 }
 
 dd {
-  margin: 0 0 0 1.5rem;
-  font-style: italic;
+    margin: 0 0 0 1.5rem;
+    font-style: italic;
 }
 
-dd + dt {
-  margin-top: 1.5rem;
+dd+dt {
+    margin-top: 1.5rem;
 }
 
 dl {
-  margin: 0 0 1.5rem 0;
+    margin: 0 0 1.5rem 0;
 }
 
 /* Blockquotes */
@@ -144,8 +203,8 @@ blockquote::before {
 
 /* Code */
 pre,
-code, 
 kbd,
+code,
 samp {
     background: var(--inner-bg) !important;
     font-family: var(--font-monospace);
@@ -161,7 +220,7 @@ pre {
 /* Fix overflow when config markup.highlight.lineNos is true */
 /* See https://github.com/joeroe/risotto/issues/41 */
 .highlight div {
-	overflow-x: auto;
+    overflow-x: auto;
 }
 
 /* Emphasis */
@@ -190,14 +249,16 @@ hr:after {
 
 
 /* Prevent super/sub from affecting line height */
-sup, sub {
+sup,
+sub {
     vertical-align: baseline;
     position: relative;
     top: -0.25rem;
     font-size: unset;
 }
-sub { 
-    top: 0.25rem; 
+
+sub {
+    top: 0.25rem;
 }
 
 /* Tables */
@@ -206,13 +267,18 @@ table {
     margin: 0 0 1.5rem 0;
     overflow-wrap: anywhere;
 }
-th, td {
+
+th,
+td {
     padding: 0 .75rem;
     vertical-align: top;
 }
-th:first-child, td:first-child {
+
+th:first-child,
+td:first-child {
     padding-left: 0;
 }
+
 th {
     text-align: inherit;
 }
@@ -224,36 +290,130 @@ img {
 }
 
 /* Colour classes */
-.base00 { color: var(--base00); }
-.base01 { color: var(--base01); }
-.base02 { color: var(--base02); }
-.base03 { color: var(--base03); }
-.base04 { color: var(--base04); }
-.base05 { color: var(--base05); }
-.base06 { color: var(--base06); }
-.base07 { color: var(--base07); }
-.base08 { color: var(--base08); }
-.base09 { color: var(--base09); }
-.base0A { color: var(--base0A); }
-.base0B { color: var(--base0B); }
-.base0C { color: var(--base0C); }
-.base0D { color: var(--base0D); }
-.base0E { color: var(--base0E); }
-.base0F { color: var(--base0F); }
+.base00 {
+    color: var(--base00);
+}
 
-.bg-base00 { background-color: var(--base00); }
-.bg-base01 { background-color: var(--base01); }
-.bg-base02 { background-color: var(--base02); }
-.bg-base03 { background-color: var(--base03); }
-.bg-base04 { background-color: var(--base04); }
-.bg-base05 { background-color: var(--base05); }
-.bg-base06 { background-color: var(--base06); }
-.bg-base07 { background-color: var(--base07); }
-.bg-base08 { background-color: var(--base08); }
-.bg-base09 { background-color: var(--base09); }
-.bg-base0A { background-color: var(--base0A); }
-.bg-base0B { background-color: var(--base0B); }
-.bg-base0C { background-color: var(--base0C); }
-.bg-base0D { background-color: var(--base0D); }
-.bg-base0E { background-color: var(--base0E); }
-.bg-base0F { background-color: var(--base0F); }
+.base01 {
+    color: var(--base01);
+}
+
+.base02 {
+    color: var(--base02);
+}
+
+.base03 {
+    color: var(--base03);
+}
+
+.base04 {
+    color: var(--base04);
+}
+
+.base05 {
+    color: var(--base05);
+}
+
+.base06 {
+    color: var(--base06);
+}
+
+.base07 {
+    color: var(--base07);
+}
+
+.base08 {
+    color: var(--base08);
+}
+
+.base09 {
+    color: var(--base09);
+}
+
+.base0A {
+    color: var(--base0A);
+}
+
+.base0B {
+    color: var(--base0B);
+}
+
+.base0C {
+    color: var(--base0C);
+}
+
+.base0D {
+    color: var(--base0D);
+}
+
+.base0E {
+    color: var(--base0E);
+}
+
+.base0F {
+    color: var(--base0F);
+}
+
+.bg-base00 {
+    background-color: var(--base00);
+}
+
+.bg-base01 {
+    background-color: var(--base01);
+}
+
+.bg-base02 {
+    background-color: var(--base02);
+}
+
+.bg-base03 {
+    background-color: var(--base03);
+}
+
+.bg-base04 {
+    background-color: var(--base04);
+}
+
+.bg-base05 {
+    background-color: var(--base05);
+}
+
+.bg-base06 {
+    background-color: var(--base06);
+}
+
+.bg-base07 {
+    background-color: var(--base07);
+}
+
+.bg-base08 {
+    background-color: var(--base08);
+}
+
+.bg-base09 {
+    background-color: var(--base09);
+}
+
+.bg-base0A {
+    background-color: var(--base0A);
+}
+
+.bg-base0B {
+    background-color: var(--base0B);
+}
+
+.bg-base0C {
+    background-color: var(--base0C);
+}
+
+.bg-base0D {
+    background-color: var(--base0D);
+}
+
+.bg-base0E {
+    background-color: var(--base0E);
+}
+
+.bg-base0F {
+    background-color: var(--base0F);
+}
