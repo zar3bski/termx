@@ -1,14 +1,8 @@
-# 🍚 risotto
+# termx
 
-risotto is a minimalist, responsive [hugo](https://gohugo.io) theme inspired by terminal ricing aesthetics.
+A fork of [risotto](https://github.com/joeroe/risotto) enriched with semantic tagging. The rest of the documentation comes straight from risotto's
 
-[![Hugo Themes](https://img.shields.io/badge/Hugo_Themes-risotto-blue?logo=hugo)](https://themes.gohugo.io/themes/risotto/)
-[![Version](https://img.shields.io/badge/semver-v0.4.0-blue)](https://semver.org)
-![hugo build status](https://github.com/joeroe/risotto/actions/workflows/hugo-build-exampleSite.yml/badge.svg)
-[![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Frisotto.joeroe.io)](https://validator.nu/?doc=https%3A%2F%2Frisotto.joeroe.io)
-![Code size](https://img.shields.io/github/languages/code-size/joeroe/risotto)
-
-![Screenshot of the risotto theme](https://raw.githubusercontent.com/joeroe/risotto/master/images/screenshot.png)
+=============original doc============
 
 ## Features
 
@@ -59,24 +53,24 @@ The easiest way to use other base16 styles is to place .css file from https://gi
 
 Or to define a wholly custom theme, you will need to define the following CSS variables for the following base16 colours (see [base16-dark.css](blob/main/static/css/palettes/base16-dark.css) for an example):
 
-| Base | Default colour                             | Used for            | Examples                             |
-| ---- | ------------------------------------------ | ------------------- | ------------------------------------ |
-| 00   | <span class="base00">Dark</span>           | Background          | Page background                      |
-| 01   | <span class="base01">│</span>              | Alt. background     | Content background                   |
-| 02   | <span class="base02">│</span>              | In-text backgrounds | `<pre>`, `<code>`, `<kbd>`, `<samp>` |
-| 03   | <span class="base03">│</span>              | Muted text          | `:before` & `:marker` symbols        |
-| 04   | <span class="base04">│</span>              | Alt. foreground     | Aside text                           |
-| 05   | <span class="base05">│</span>              | Foreground          | Content text                         |
-| 06   | <span class="base06">│</span>              |                     |                                      |
-| 07   | <span class="base07">Light</span>          |                     |                                      |
-| 08   | <span class="base08">Red</span>            |                     |                                      |
-| 09   | <span class="base09">Orange</span>         |                     |                                      |
-| 0A   | <span class="base0A">Yellow</span>         | Highlights          | Selected text, `<mark>`              |
-| 0B   | <span class="base0B">Green</span>          | Primary accent      | Logo                                 |
-| 0C   | <span class="base0C">Cyan</span>           | Active links        | `a:active`, `a:hover`                |
-| 0D   | <span class="base0D">Blue</span>           | Links               | `a:link`, `a:visited`                |
-| 0E   | <span class="base0E">Magenta</span>        |                     |                                      |
-| 0F   | <span class="base0F">Brown</span>          |                     |                                      |
+| Base | Default colour                      | Used for            | Examples                             |
+| ---- | ----------------------------------- | ------------------- | ------------------------------------ |
+| 00   | <span class="base00">Dark</span>    | Background          | Page background                      |
+| 01   | <span class="base01">│</span>       | Alt. background     | Content background                   |
+| 02   | <span class="base02">│</span>       | In-text backgrounds | `<pre>`, `<code>`, `<kbd>`, `<samp>` |
+| 03   | <span class="base03">│</span>       | Muted text          | `:before` & `:marker` symbols        |
+| 04   | <span class="base04">│</span>       | Alt. foreground     | Aside text                           |
+| 05   | <span class="base05">│</span>       | Foreground          | Content text                         |
+| 06   | <span class="base06">│</span>       |                     |                                      |
+| 07   | <span class="base07">Light</span>   |                     |                                      |
+| 08   | <span class="base08">Red</span>     |                     |                                      |
+| 09   | <span class="base09">Orange</span>  |                     |                                      |
+| 0A   | <span class="base0A">Yellow</span>  | Highlights          | Selected text, `<mark>`              |
+| 0B   | <span class="base0B">Green</span>   | Primary accent      | Logo                                 |
+| 0C   | <span class="base0C">Cyan</span>    | Active links        | `a:active`, `a:hover`                |
+| 0D   | <span class="base0D">Blue</span>    | Links               | `a:link`, `a:visited`                |
+| 0E   | <span class="base0E">Magenta</span> |                     |                                      |
+| 0F   | <span class="base0F">Brown</span>   |                     |                                      |
 
 For light mode palettes, the sequence of 00–07 should be reversed (light to dark, not dark to light).
 Note that not all colours are currently used in the theme.

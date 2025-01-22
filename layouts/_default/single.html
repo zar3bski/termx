@@ -1,12 +1,14 @@
 {{ define "main" }}
+
 <header class="content__header">
 
     <div class="section-path">{{.CurrentSection}}</div>
-    {{ if (.Params.series) }}<div class="series-path">{{.Params.series}}</div>{{end}}<br>
+    {{ if (.Params.series) }}<div property="mainEntity" class="series-path">{{.Params.series}}</div>{{end}}<br>
 
-    {{ if .Params.tags }} {{range .Params.tags }}<div class="tag">{{ . }}</div>{{ end }}<br>{{ end }}
+    {{ if .Params.tags }} {{range .Params.tags }}<div property="keywords" class="tag">{{ . }}</div>{{ end }}<br>{{ end
+    }}
 
-    <h1>{{ .Title | markdownify }}</h1>
+    <h1 property="name">{{ .Title | markdownify }}</h1>
 </header>
 <div class="content__body">
     {{ .Content }}
@@ -15,11 +17,15 @@
 {{ end }}
 
 {{define "aside" }}
-{{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+{{ if .Params.description }}<p typeof="abstract">{{ .Params.description }}</p>{{ end }}
 {{ if or (.Params.author) (.Params.date) }}
 <p>
-    {{ if .Params.author }}By {{ .Params.author }}{{ if .Date }}, {{ end }}{{ end }}
-    {{ if .Date }}{{ .Date.Format "2006-01-02" }}{{ end }}
+    {{ if .Params.author }}
+    By
+    <span property="author"> <span typeof="Person"><span property="name">{{ .Params.author }}</span></span></span>
+    {{ if .Date }}, {{ end }}{{ end }}
+    {{ if .Date }}<span property="dateModified">{{ .Date.Format "2006-01-02" }}</span>
+    {{ end }}
 </p>
 {{ end }}
 
