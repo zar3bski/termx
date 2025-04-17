@@ -5,9 +5,8 @@
 </header><br>
 
 {{ .Content }}
-
 <ul>
-    {{ range .Pages }}
+    {{ range sort .Pages ".Params.series" }}
     {{ .Render "li" }}
     {{ end }}
 </ul>
