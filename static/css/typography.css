@@ -6,7 +6,7 @@
 body {
     font-family: var(--font-monospace);
     font-size: 16px;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
 }
 
 /* Headings */
@@ -16,8 +16,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: 1rem;
-    margin: 1.5rem 0 0 0;
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.7rem 0;
     font-weight: 600;
 }
 
@@ -90,25 +90,25 @@ h6:after {
 h1:before,
 h2:before,
 h3:before {
-    color: var(--base08);
+    color: var(--big-titles);
 }
 
 h4:before,
 h5:before,
 h6:before {
-    color: var(--base09);
+    color: var(--small-titles);
 }
 
 h1:after,
 h2:after,
 h3:after {
-    color: var(--base08);
+    color: var(--big-titles);
 }
 
 h4:after,
 h5:after,
 h6:after {
-    color: var(--base09);
+    color: var(--small-titles);
 }
 
 h1:first-child {
@@ -135,7 +135,7 @@ a.active {
 
 /* Lists */
 ul {
-    margin: 0 0 1.5rem 0;
+    margin: 0.5rem 0 1.5rem 0;
     padding-left: 1.25rem;
 }
 
@@ -151,13 +151,17 @@ ol ol {
     margin: 0;
 }
 
+li {
+    margin: 0.5rem 0;
+}
+
 ul li::marker {
-    content: '∗\00A0';
-    color: var(--muted);
+    content: '>\00A0';
+    color: var(--list-marquer);
 }
 
 ol li::marker {
-    color: var(--muted);
+    color: var(--list-marquer);
 }
 
 li.nomarker {
@@ -204,22 +208,27 @@ blockquote::before {
 /* Code */
 pre,
 kbd,
-code,
 samp {
     background: var(--inner-bg) !important;
     font-family: var(--font-monospace);
     color: var(--off-fg);
 }
 
-pre {
-    overflow-x: auto;
-    padding: 1.5rem;
-    margin: 0 0 1.5rem 0;
+code {
+    border-radius: 5px;
+    background: var(--inner-bg) !important;
+    font-family: var(--font-monospace);
+    color: var(--code);
 }
 
-/* Fix overflow when config markup.highlight.lineNos is true */
-/* See https://github.com/joeroe/risotto/issues/41 */
+pre {
+    overflow-x: auto;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
 .highlight div {
+    border-radius: 5px;
     overflow-x: auto;
 }
 
@@ -264,14 +273,16 @@ sub {
 /* Tables */
 table {
     border-spacing: 0;
-    margin: 0 0 1.5rem 0;
+    margin: 1.5rem 0.5rem 1.5rem 1.5rem;
     overflow-wrap: anywhere;
+    line-height: 1.5rem;
 }
 
 th,
 td {
-    padding: 0 .75rem;
+    padding: 0 .85rem;
     vertical-align: top;
+
 }
 
 th:first-child,
@@ -286,7 +297,10 @@ th {
 /* Figures */
 img {
     max-width: 100%;
+    display: block;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Colour classes */

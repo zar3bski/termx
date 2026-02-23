@@ -30,9 +30,6 @@
     float: left;
 }
 
-.series-path::before {
-    content: ">";
-}
 
 .series-path::after {
     content: "/";

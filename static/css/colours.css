@@ -10,7 +10,11 @@
 	--muted: var(--base03);
 	--link: var(--base0D);
 	--hover: var(--base0C);
+	--big-titles: var(--base0C);
+	--small-titles: var(--base0E);
 	--highlight: var(--base0A);
+	--list-marquer: var(--base0C);
+	--code: var(--base04);
 
 	/* Logo */
 	--logo: var(--base0B);
