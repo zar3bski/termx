@@ -12,6 +12,12 @@
             {{- partial "header.html" . -}}
         </header>
 
+        <section class="page__recent">
+            <div class="recent__about">
+                {{- partial "recent.html" . -}}
+            </div>
+        </section>
+
         <section typeof="Article" class="page__body">
             {{- block "main" . }}{{- end }}
         </section>

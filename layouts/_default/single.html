@@ -23,7 +23,7 @@
     {{ if .Params.author }}
     By
     <span property="author"> <span typeof="Person"><span property="name">{{ .Params.author }}</span></span></span>
-    {{ if .Date }}, {{ end }}{{ end }}
+    {{ if .Date }}{{ end }}{{ end }}<br>
     {{ if .Date }}<span property="dateModified">{{ .Date.Format "2006-01-02" }}</span>
     {{ end }}
 </p>

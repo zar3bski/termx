@@ -1,0 +1,9 @@
+<h1 class="about__title">Recent</h1>
+
+{{ range first 5 .Site.RegularPages.ByDate.Reverse }}
+<hr>
+<a href="{{ .Permalink }}" class="recent_box">
+        {{ .Title }}
+</a>
+
+{{ end }}
