@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<header class="content__header">
+    <div class="section-path">/{{.Title}}</div>
+</header><br>
+
+{{ .Content }}
+<br>
+{{ range .Resources.Match "*.pdf" }}
+  <a href={{ .Permalink }}>{{ .Name }}</a><br>
+{{ end }}
+
+{{ end }}
+
+{{define "aside" }}
+{{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+{{ end }}
