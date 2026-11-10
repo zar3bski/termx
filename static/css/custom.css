@@ -41,3 +41,48 @@
     color: black;
     float: left;
 }
+
+/*recent section styling*/
+
+.recent-item {
+    position: relative;
+    padding: 8px 12px;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Tilde styling for each item */
+.recent-item::before {
+    content: "~ ";
+    color: #666;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.recent-item:hover {
+    color: var(--hover);
+    transform: translateX(5px);
+    text-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+.recent-item:hover::before {
+    color: #0066cc;
+}
+
+/* Active/visited state */
+.recent-item:active {
+    transform: translateX(3px);
+}
+
+/* Optional: add a subtle background on hover */
+.recent-item:hover {
+    background-color: rgba(0, 102, 204, 0.05);
+}
+
+
+
+
